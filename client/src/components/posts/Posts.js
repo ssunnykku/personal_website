@@ -65,7 +65,9 @@ function PostMap({ photoI }) {
         <div className="postbox-post">
           <div>
             <img className="more-btn" src="/icon/more.svg" alt="btn-setting" />
-            <More />
+            <div style={{ position: "relative", top: "-44px" }}>
+              <More />
+            </div>
           </div>
           <div className="postbox-contents">
             <h3>{photoI.title}</h3>
