@@ -68,7 +68,7 @@ const DialogBlock = styled.div`
   }
 `;
 
-function Dialog({ dialog, setDialog }) {
+function Dialog({ write, setWrite }) {
   return (
     <DarkBackground>
       <DialogBlock>
@@ -87,7 +87,7 @@ function Dialog({ dialog, setDialog }) {
           <img
             src="icon/close.svg"
             onClick={() => {
-              setDialog(false);
+              setWrite(false);
             }}
           />
         </div>

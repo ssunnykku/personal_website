@@ -13,7 +13,7 @@ function Posts() {
   //   axios.get("/api").then((res) => console.log(res.data.test));
   // };
 
-  const [dialog, setDialog] = useState(false);
+  const [write, setWrite] = useState(false);
 
   useEffect(() => {
     axios.get("/posts").then((res) => console.log(res.data));
@@ -37,7 +37,7 @@ function Posts() {
           className="posts-writeBtn"
           style={{ color: "blue" }}
           onClick={() => {
-            setDialog(true);
+            setWrite(true);
           }}
         >
           Write
@@ -50,12 +50,14 @@ function Posts() {
           })}
         </div>
       </div>
-      {dialog ? <Dialog dialog={dialog} setDialog={setDialog} /> : null}
+      {write ? <Dialog write={write} setWrite={setWrite} /> : null}
     </div>
   );
 }
 
 function PostMap({ photoI }) {
+  const [more, setMore] = useState(false);
+
   return (
     <>
       <div className="post">
@@ -64,10 +66,20 @@ function PostMap({ photoI }) {
       <div className="post">
         <div className="postbox-post">
           <div>
-            <img className="more-btn" src="/icon/more.svg" alt="btn-setting" />
-            <div style={{ position: "relative", top: "-44px" }}>
-              <More />
-            </div>
+            <img
+              onClick={() => {
+                setMore(!more);
+              }}
+              className="more-btn"
+              src="/icon/more.svg"
+              alt="btn-setting"
+            />
+            {/* <div
+x",
+              }}
+            > */}
+            {more ? <More /> : null}
+            {/* </div> */}
           </div>
           <div className="postbox-contents">
             <h3>{photoI.title}</h3>

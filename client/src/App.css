@@ -159,25 +159,30 @@ color: #000000;
 
 .container-login {
   display: grid;
-  grid-template-rows: 600px 100px;
+  grid-template-rows: 600px 200px;
 }
 
 .login:first-child > Form {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  width: 680px;
-  height: 339px;
+  width: 680px;;
   left: 680px;
   top: 208px;
 
 }
 
 .login:last-child {
+  margin: 0;
+  padding: 0;
   background-color: #333;
 }
 
 /* RegisterForm */
 
 .registerForm {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 680px;
   height: 700px;
@@ -264,7 +269,7 @@ color: #000000;
   position: absolute;
   width: 67.02px;
   height: 26px;
-  left: 1331px;
+  left: 1400px;
   top: 116px;
 
   font-weight: 400;

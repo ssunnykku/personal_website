@@ -4,9 +4,6 @@ const PhotoSchema = new Schema({
   id: {
     type: Number,
   },
-  photo: {
-    type: String,
-  },
   title: {
     type: String,
     required: true,
