@@ -157,21 +157,6 @@ color: #000000;
 
 /* LoginForm */
 
-.container-login {
-  display: grid;
-  grid-template-rows: 600px 200px;
-}
-
-.login:first-child > Form {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  width: 680px;;
-  left: 680px;
-  top: 208px;
-
-}
-
 .login:last-child {
   margin: 0;
   padding: 0;
