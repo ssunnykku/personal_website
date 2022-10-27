@@ -282,7 +282,7 @@ color: #000000;
 .container-posts {
   display: grid;
   grid-template-columns: 380px 650px;
-  grid-template-rows: 380px 380px 380px;
+  grid-template-rows: repeat(3, 380px);
   row-gap: 35px;
 
   position: absolute;
