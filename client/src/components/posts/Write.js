@@ -38,7 +38,7 @@ const DialogBlock = styled.div`
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   .titleArea {
@@ -70,6 +70,11 @@ const SelectIconImg = styled.img`
   width: 40px;
   margin: 0px;
   padding: 10px;
+  padding-right: 38%;
+`;
+
+const H2 = styled.h2`
+  padding-right: 40%;
 `;
 
 const DescriptionInput = styled.input`
@@ -135,14 +140,14 @@ function Write({ write, setWrite }) {
       <Background>
         <DialogBlock>
           <div className="newPost">
-            <SelectIconImg src="icon/chevron_left.svg" />
-            <h2>새 게시물 등록하기</h2>
             <SelectIconImg
-              src="icon/close.svg"
+              src="icon/chevron_left.svg"
               onClick={() => {
                 setWrite(false);
               }}
             />
+            <H2>새 게시물 등록하기</H2>
+            {/* <SelectIconImg src="icon/close.svg" /> */}
           </div>
           <div className="titleArea">
             <TitleInput type="text" placeholder="제목" />
