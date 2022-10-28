@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import photos from "../photos";
+import photos from "../data/photos";
 import More from "./More";
 
 function PostedImgs({ photoI }) {

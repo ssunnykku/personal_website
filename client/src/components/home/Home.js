@@ -1,11 +1,13 @@
-import React from "react";
-import photos from "../photos";
+import React, { useState } from "react";
+import photos from "../data/photos";
 import { Link } from "react-router-dom";
 
 import Profile from "../Profile";
 import Menu from "../Menu";
 
 function Home() {
+  const [write, setWrite] = useState(false);
+
   return (
     <>
       <Profile />

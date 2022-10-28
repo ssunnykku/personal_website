@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import photos from "../photos";
+import photos from "../data/photos";
 
 const Background = styled.div`
   position: fixed;
