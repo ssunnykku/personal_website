@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import photos from "../photos";
+import photos from "../data/photos";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Profile from "../Profile";
 import Menu from "../Menu";
-import Dialog from "./Dialog";
-import More from "./More";
+import Write from "./Write";
+import PostedImgs from "./PostedImgs";
 
 function Posts() {
   // const callApi = async () => {
   //   axios.get("/api").then((res) => console.log(res.data.test));
   // };
 
-  const [dialog, setDialog] = useState(false);
+  const [write, setWrite] = useState(false);
 
   useEffect(() => {
     axios.get("/posts").then((res) => console.log(res.data));
@@ -37,7 +37,7 @@ function Posts() {
           className="posts-writeBtn"
           style={{ color: "blue" }}
           onClick={() => {
-            setDialog(true);
+            setWrite(true);
           }}
         >
           Write
@@ -46,37 +46,12 @@ function Posts() {
         {/* </Link> */}
         <div className="container-posts">
           {photos.map((a, i) => {
-            return <PostMap photoI={photos[i]} key={photos[i].id} />;
+            return <PostedImgs photoI={photos[i]} key={photos[i].id} />;
           })}
         </div>
       </div>
-      {dialog ? <Dialog dialog={dialog} setDialog={setDialog} /> : null}
+      {write ? <Write write={write} setWrite={setWrite} /> : null}
     </div>
-  );
-}
-
-function PostMap({ photoI }) {
-  return (
-    <>
-      <div className="post">
-        <img className="postbox-img" src={photoI.photo} />
-      </div>
-      <div className="post">
-        <div className="postbox-post">
-          <div>
-            <img className="more-btn" src="/icon/more.svg" alt="btn-setting" />
-            <div style={{ position: "relative", top: "-44px" }}>
-              <More />
-            </div>
-          </div>
-          <div className="postbox-contents">
-            <h3>{photoI.title}</h3>
-            <p>{photoI.date}</p>
-            <p>{photoI.description}</p>
-          </div>
-        </div>
-      </div>
-    </>
   );
 }
 

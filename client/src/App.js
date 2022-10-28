@@ -34,7 +34,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/posts" element={<Posts />} />
-        <Route path="/write" element={<Write />} />
+        {/* <Route path="/write" element={<Write />} /> */}
         {/* <Route path="*" element={<Home />} /> */}
       </Routes>
     </>
