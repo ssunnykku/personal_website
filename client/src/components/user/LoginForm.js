@@ -13,7 +13,7 @@ const LoginFormBack = styled.div`
     "otherMethodToLogin";
 
   margin: 0;
-  padding: 0;
+  padding: 10px;
   position: absolute;
   min-height: 50vh;
   width: 450px;
@@ -30,10 +30,18 @@ const LoginFormBack = styled.div`
   .emailInput {
     grid-area: emailInput;
     border-bottom: solid 1px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .passwordInput {
     grid-area: passwordInput;
     border-bottom: solid 1px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .loginButton {
     grid-area: loginButton;
@@ -45,6 +53,12 @@ const LoginFormBack = styled.div`
   }
 `;
 
+const PasswordLabel = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 function LoginForm() {
   return (
     <>
@@ -54,14 +68,14 @@ function LoginForm() {
         </div>
         <div className="emailInput">
           <label for="email">Email</label>
-          <input type="email" name="email" />
+          <input type="email" name="email" id="email" />
         </div>
         <div className="passwordInput">
           <label for="password">Password</label>
           <div>
             <a href="#">Forgot your password?</a>
           </div>
-          <input type="password" name="password" />
+          <input type="password" name="password" id="password" />
         </div>
         <div className="loginButton">
           <button>로그인</button>

@@ -23,7 +23,6 @@ const DialogBlock = styled.div`
 
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
-  row-gap: 10px;
 
   grid-template-areas:
     "newPost"
@@ -108,12 +107,12 @@ const SelectLabel = styled.label`
 
 // input(file) 숨기기
 const UploadInput = styled.input`
-  // position: absolute;
-  // with: 0;
-  // height: 0;
-  // padding: 0;
-  // overflow: hidden;
-  // border: 0;
+  position: absolute;
+  with: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
 `;
 
 const PostButton = styled.button`
@@ -160,7 +159,7 @@ function Write({ write, setWrite }) {
               disabled // input(text) 태그 수정 불가
             />
             <SelectLabel for="upload-file">파일선택</SelectLabel>
-            <UploadInput type="file" />
+            <UploadInput type="file" id="upload-file" />
             {/* File 필드 사용 */}
           </div>
           <div className="description">
