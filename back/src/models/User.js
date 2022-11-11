@@ -3,15 +3,22 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 class User {
-  static async createUser({ name, email }) {
-    const createdUser = await prisma.User.create({
-      data: {
-        name: name,
-        email: email,
+  static async createUser({ newUser }) {
+    const createdNewUser = await prisma.User.create({
+      data: newUser,
+    });
+    return createdNewUser;
+  }
+
+  static async findByEmail({ email }) {
+    const findUserEmail = await prisma.user.findUnique({
+      where: {
+        email,
       },
     });
-    return createdUser;
   }
+
+  static async findById({ userId }) {}
 }
 
 export { User };

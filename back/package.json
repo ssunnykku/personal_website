@@ -23,6 +23,7 @@
     "global": "^4.4.0",
     "jwt-decode": "^3.1.2",
     "multer": "^1.4.5-lts.1",
+    "uuidv4": "^6.2.13",
     "yarn": "^1.22.19"
   },
   "proxy": "http://localhost:5000",
